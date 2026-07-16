@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gorman Thompson Construction LLC | Flooring, Painting & Renovations — Smithville, MO</title>
+<meta name="description" content="Gorman Thompson Construction LLC is a 5-star rated, locally owned construction company in Smithville, MO offering flooring installation, painting, and full home renovations. Free estimates.">
+<meta name="keywords" content="construction company Smithville MO, flooring installation, LVP flooring, interior painting, exterior painting, home renovation, general contractor Smithville, Kansas City remodeling">
+<link rel="canonical" href="https://www.gormanthompsonconstruction.com/">
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="Gorman Thompson Construction LLC | Smithville, MO">
+<meta property="og:description" content="5.0-star rated flooring, painting & renovation contractor serving Smithville, MO and the Northland. Get a free estimate today.">
+<meta property="og:url" content="https://www.gormanthompsonconstruction.com/">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23ff6a1f%22/><text x=%2250%22 y=%2266%22 font-size=%2255%22 text-anchor=%22middle%22 fill=%22%23160a03%22 font-family=%22Arial%22 font-weight=%22bold%22>GT</text></svg>">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GeneralContractor",
+  "name": "Gorman Thompson Construction LLC",
+  "telephone": "+1-816-398-3600",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "301 192nd St",
+    "addressLocality": "Smithville",
+    "addressRegion": "MO",
+    "postalCode": "64089",
+    "addressCountry": "US"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 39.3903, "longitude": -94.5827 },
+  "url": "https://www.gormanthompsonconstruction.com/",
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "06:00", "closes": "18:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "06:00", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "12:00", "closes": "17:00" }
+  ],
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "5" },
+  "review": [
+    {"@type":"Review","author":{"@type":"Person","name":"Shelly Williams"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Hired GT Construction to install LVP in an entry point in a home. Nate is very talented at what he does."},
+    {"@type":"Review","author":{"@type":"Person","name":"Jerry Lynch"},"reviewRating":{"@type":"Rating","ratingValue":"5"},"reviewBody":"Nate did a great job painting my house, very professional and reasonably priced. Work was done over and beyond my expectations."}
+  ],
+  "areaServed": ["Smithville MO", "Kansas City Northland"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Construction Services",
+    "itemListElement": [
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Flooring Installation"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Interior & Exterior Painting"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Home Renovations & Repairs"}}
+    ]
+  }
+}
+</script>
+
+<style>
+/* ============================================================
+   Gorman Thompson Construction — single-file build
+   Palette: Job-site charcoal + safety orange + blueprint blue
+   Display: Space Grotesk / Body: Inter / Utility: IBM Plex Mono
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root{
+  --bg: #0a0c0f; --bg-alt: #0e1114; --bg-soft: #121620;
+  --surface: rgba(255,255,255,0.045); --surface-hi: rgba(255,255,255,0.08);
+  --border: rgba(255,255,255,0.10); --border-hi: rgba(255,255,255,0.20);
+  --ink: #f4f2ec; --ink-dim: #a7adb6; --ink-faint: #666c76;
+  --orange: #ff6a1f; --orange-soft: #ffb27a; --orange-dim: #7a3410;
+  --blue: #3e7bfa; --blue-soft: #9db8ff; --success: #3ccb7f;
+  --font-display: 'Space Grotesk', sans-serif; --font-body: 'Inter', sans-serif; --font-mono: 'IBM Plex Mono', monospace;
+  --radius-sm: 8px; --radius-md: 14px; --radius-lg: 22px;
+  --ease: cubic-bezier(.16,.84,.44,1); --container: 1200px;
+}
+*,*::before,*::after{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+html,body{ padding:0; margin:0; }
+body{ background:var(--bg); color:var(--ink); font-family:var(--font-body); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+img{ max-width:100%; display:block; }
+a{ color:inherit; text-decoration:none; }
+ul{ margin:0; padding:0; list-style:none; }
+button{ font-family:inherit; cursor:pointer; }
+input,textarea,select{ font-family:inherit; }
+.container{ max-width:var(--container); margin:0 auto; padding:0 28px; }
+
+.eyebrow{ font-family:var(--font-mono); font-size:12.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--orange); display:inline-flex; align-items:center; gap:10px; }
+.eyebrow::before{ content:''; width:7px;height:7px; background:var(--orange); box-shadow:0 0 12px var(--orange); display:inline-block; }
+h1,h2,h3,h4{ font-family:var(--font-display); color:var(--ink); margin:0; line-height:1.08; letter-spacing:-.01em; }
+h1{ font-weight:700; } h2{ font-weight:600; }
+
+.section{ position:relative; padding:120px 0; }
+.section--tight{ padding:80px 0; }
+@media (max-width: 780px){ .section{ padding:76px 0; } .section--tight{ padding:56px 0; } }
+.section__head{ max-width:640px; margin-bottom:56px; }
+.section__head h2{ font-size:clamp(28px,4vw,42px); margin-top:14px; }
+.section__head p{ color:var(--ink-dim); font-size:17px; margin-top:16px; max-width:560px; }
+.section__head--center{ margin-left:auto; margin-right:auto; text-align:center; }
+.section__head--center p{ margin-left:auto; margin-right:auto; }
+
+.btn{ display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:15px 28px; border-radius:999px; font-weight:600; font-size:15px; border:1px solid transparent; transition:transform .35s var(--ease), box-shadow .35s var(--ease), background .25s ease, border-color .25s ease; white-space:nowrap; }
+.btn-primary{ background:linear-gradient(135deg,var(--orange),#ff8a3d); color:#160a03; box-shadow:0 8px 30px -8px rgba(255,106,31,.65); }
+.btn-primary:hover{ transform:translateY(-2px); box-shadow:0 14px 36px -8px rgba(255,106,31,.85); }
+.btn-ghost{ background:var(--surface); color:var(--ink); border-color:var(--border); backdrop-filter:blur(8px); }
+.btn-ghost:hover{ border-color:var(--border-hi); background:var(--surface-hi); transform:translateY(-2px); }
+.btn-block{ width:100%; }
+.btn svg{ width:16px; height:16px; flex-shrink:0; }
+
+.nav{ position:fixed; top:0; left:0; right:0; z-index:100; padding:18px 0; transition:background .4s ease, border-color .4s ease, padding .4s ease; border-bottom:1px solid transparent; }
+.nav.is-scrolled{ background:rgba(10,12,15,.78); backdrop-filter:blur(14px) saturate(140%); border-bottom:1px solid var(--border); padding:12px 0; }
+.nav__row{ display:flex; align-items:center; justify-content:space-between; gap:24px; }
+.nav__brand{ display:flex; align-items:center; gap:11px; font-family:var(--font-display); font-weight:700; font-size:17px; letter-spacing:-.01em; }
+.nav__mark{ width:36px; height:36px; border-radius:9px; background:linear-gradient(135deg,var(--orange),#c94e10); display:flex; align-items:center; justify-content:center; color:#160a03; font-weight:700; font-family:var(--font-display); box-shadow:0 4px 18px -4px rgba(255,106,31,.7); }
+.nav__brand small{ display:block; font-family:var(--font-mono); font-weight:400; font-size:10.5px; letter-spacing:.1em; color:var(--ink-faint); text-transform:uppercase; margin-top:2px; }
+.nav__links{ display:flex; align-items:center; gap:36px; }
+.nav__links a{ font-size:14.5px; font-weight:500; color:var(--ink-dim); position:relative; padding:6px 0; transition:color .25s ease; }
+.nav__links a::after{ content:''; position:absolute; left:0; bottom:0; height:1.5px; width:0; background:var(--orange); transition:width .3s var(--ease); }
+.nav__links a:hover{ color:var(--ink); } .nav__links a:hover::after{ width:100%; }
+.nav__links a.is-active{ color:var(--ink); } .nav__links a.is-active::after{ width:100%; }
+.nav__cta{ display:flex; align-items:center; gap:14px; }
+.nav__phone{ display:flex; align-items:center; gap:8px; font-family:var(--font-mono); font-size:13.5px; color:var(--ink-dim); }
+.nav__phone svg{ width:15px; height:15px; color:var(--orange); }
+.nav__toggle{ display:none; }
+@media (max-width: 920px){ .nav__links{ display:none; } .nav__phone span{ display:none; } .nav__toggle{ display:flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:8px; background:var(--surface); border:1px solid var(--border); } .nav__toggle svg{ width:18px; height:18px; } }
+
+.drawer{ position:fixed; inset:0; z-index:150; background:rgba(8,9,11,.97); backdrop-filter:blur(10px); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:28px; opacity:0; pointer-events:none; transition:opacity .35s ease; }
+.drawer.is-open{ opacity:1; pointer-events:auto; }
+.drawer a{ font-family:var(--font-display); font-size:28px; font-weight:600; }
+.drawer__close{ position:absolute; top:22px; right:22px; width:42px; height:42px; border-radius:10px; background:var(--surface); border:1px solid var(--border); display:flex; align-items:center; justify-content:center; }
+.drawer__close svg{ width:18px; height:18px; }
+
+.hero{ position:relative; min-height:100vh; display:flex; align-items:center; padding:160px 0 100px; overflow:hidden;
+  background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(62,123,250,.16), transparent 60%), radial-gradient(ellipse 50% 40% at 85% 100%, rgba(255,106,31,.14), transparent 60%), var(--bg); }
+.hero__grid-wrap{ position:absolute; inset:0; z-index:0; perspective:600px; perspective-origin:50% 20%; -webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 22%, black 78%, transparent 100%); mask-image:linear-gradient(to bottom, transparent 0%, black 22%, black 78%, transparent 100%); }
+.hero__grid{ position:absolute; left:-50%; right:-50%; bottom:-10%; height:140%;
+  background-image: linear-gradient(rgba(255,106,31,.22) 1px, transparent 1px), linear-gradient(90deg, rgba(255,106,31,.22) 1px, transparent 1px);
+  background-size:56px 56px; transform:rotateX(72deg); transform-origin:bottom; animation:gridDrift 9s linear infinite; }
+@keyframes gridDrift{ from{ background-position:0 0, 0 0; } to{ background-position:0 56px, 56px 0; } }
+.hero__beam{ position:absolute; z-index:0; border-radius:50%; filter:blur(70px); opacity:.55; pointer-events:none; }
+.hero__beam--1{ width:420px; height:420px; background:var(--blue); top:-120px; right:6%; animation:floaty 12s ease-in-out infinite; }
+.hero__beam--2{ width:340px; height:340px; background:var(--orange); bottom:-100px; left:2%; animation:floaty 14s ease-in-out infinite reverse; }
+@keyframes floaty{ 0%,100%{ transform:translateY(0) translateX(0); } 50%{ transform:translateY(-26px) translateX(14px); } }
+.hero__inner{ position:relative; z-index:2; display:grid; grid-template-columns:1.05fr .95fr; gap:48px; align-items:center; }
+@media (max-width: 980px){ .hero__inner{ grid-template-columns:1fr; } }
+.hero__badge{ display:inline-flex; align-items:center; gap:9px; background:var(--surface); border:1px solid var(--border); padding:8px 16px; border-radius:999px; font-family:var(--font-mono); font-size:12.5px; letter-spacing:.06em; color:var(--ink-dim); backdrop-filter:blur(8px); margin-bottom:26px; }
+.hero__badge .stars{ color:var(--orange); letter-spacing:1px; }
+.hero h1{ font-size:clamp(38px,5.4vw,68px); margin-bottom:22px; }
+.hero h1 em{ font-style:normal; background:linear-gradient(100deg,var(--orange),var(--orange-soft) 60%,var(--blue-soft)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.hero p.lede{ font-size:18px; color:var(--ink-dim); max-width:520px; margin-bottom:36px; }
+.hero__actions{ display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin-bottom:44px; }
+.hero__stats{ display:flex; gap:36px; flex-wrap:wrap; }
+.hero__stat b{ display:block; font-family:var(--font-display); font-size:26px; color:var(--ink); }
+.hero__stat span{ font-size:13px; color:var(--ink-faint); font-family:var(--font-mono); text-transform:uppercase; letter-spacing:.05em; }
+.hero__visual{ position:relative; height:480px; }
+.tilt-card{ position:absolute; border-radius:var(--radius-lg); background:linear-gradient(155deg, var(--surface-hi), var(--surface)); border:1px solid var(--border-hi); backdrop-filter:blur(14px); box-shadow:0 30px 60px -20px rgba(0,0,0,.6); transition:transform .1s linear; will-change:transform; }
+.tilt-card--main{ inset:20px 40px 60px 0; padding:26px; display:flex; flex-direction:column; justify-content:space-between; }
+.tilt-card--main .blueprint{ position:absolute; inset:0; border-radius:inherit; opacity:.5; background-image:linear-gradient(rgba(62,123,250,.35) 1px, transparent 1px), linear-gradient(90deg, rgba(62,123,250,.35) 1px, transparent 1px); background-size:26px 26px; -webkit-mask-image:radial-gradient(circle at 30% 20%, black, transparent 75%); mask-image:radial-gradient(circle at 30% 20%, black, transparent 75%); }
+.tilt-card--main .row{ position:relative; display:flex; justify-content:space-between; align-items:flex-start; }
+.tilt-card--main .label{ font-family:var(--font-mono); font-size:12px; color:var(--ink-faint); text-transform:uppercase; letter-spacing:.08em; }
+.tilt-card--main .figure{ font-family:var(--font-display); font-size:44px; font-weight:700; color:var(--orange); position:relative; }
+.tilt-card--float{ width:220px; padding:18px 20px; bottom:24px; right:-10px; display:flex; align-items:center; gap:14px; }
+.tilt-card--float .ico{ width:40px; height:40px; border-radius:10px; background:linear-gradient(135deg,var(--success),#1f8f57); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.tilt-card--float .ico svg{ width:20px; height:20px; color:#03150a; }
+.tilt-card--float b{ display:block; font-size:14px; } .tilt-card--float span{ font-size:12px; color:var(--ink-faint); }
+@media (max-width: 980px){ .hero__visual{ height:340px; margin-top:20px; } }
+@media (max-width: 560px){ .hero__visual{ display:none; } }
+.scroll-cue{ position:absolute; bottom:32px; left:50%; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:8px; font-family:var(--font-mono); font-size:11px; letter-spacing:.14em; color:var(--ink-faint); text-transform:uppercase; z-index:2; }
+.scroll-cue__line{ width:1px; height:34px; background:linear-gradient(var(--orange), transparent); animation:cueMove 1.8s ease-in-out infinite; }
+@keyframes cueMove{ 0%{ opacity:0; transform:scaleY(.4); transform-origin:top;} 40%{opacity:1;} 100%{ opacity:0; transform:scaleY(1); transform-origin:top;} }
+
+.strip{ border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:30px 0; background:var(--bg-alt); }
+.strip__row{ display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+.strip__item{ display:flex; align-items:center; gap:10px; color:var(--ink-faint); font-family:var(--font-mono); font-size:13px; text-transform:uppercase; letter-spacing:.06em; }
+.strip__item svg{ width:16px; height:16px; color:var(--orange); }
+
+.svc-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+@media (max-width: 900px){ .svc-grid{ grid-template-columns:1fr 1fr; } }
+@media (max-width: 620px){ .svc-grid{ grid-template-columns:1fr; } }
+.svc-card{ position:relative; padding:30px 26px; border-radius:var(--radius-md); background:var(--surface); border:1px solid var(--border); overflow:hidden; transition:transform .45s var(--ease), border-color .35s ease, background .35s ease; transform-style:preserve-3d; }
+.svc-card:hover{ border-color:var(--border-hi); background:var(--surface-hi); }
+.svc-card::before{ content:''; position:absolute; inset:0; opacity:0; transition:opacity .4s ease; background:radial-gradient(180px circle at var(--mx,50%) var(--my,50%), rgba(255,106,31,.16), transparent 70%); }
+.svc-card:hover::before{ opacity:1; }
+.svc-card__ico{ width:50px; height:50px; border-radius:12px; margin-bottom:22px; background:linear-gradient(135deg, rgba(255,106,31,.22), rgba(255,106,31,.05)); border:1px solid rgba(255,106,31,.3); display:flex; align-items:center; justify-content:center; }
+.svc-card__ico svg{ width:24px; height:24px; color:var(--orange-soft); }
+.svc-card h3{ font-size:19px; margin-bottom:10px; } .svc-card p{ color:var(--ink-dim); font-size:14.5px; margin-bottom:18px; }
+.svc-card__link{ display:inline-flex; align-items:center; gap:6px; font-size:13.5px; font-weight:600; color:var(--orange-soft); }
+.svc-card__link svg{ width:14px; height:14px; transition:transform .3s var(--ease); }
+.svc-card:hover .svc-card__link svg{ transform:translateX(4px); }
+.svc-card__num{ position:absolute; top:22px; right:26px; font-family:var(--font-mono); font-size:12px; color:var(--ink-faint); }
+
+.gal-grid{ display:grid; grid-template-columns:repeat(4,1fr); grid-auto-rows:190px; gap:14px; }
+.gal-grid > a:nth-child(1){ grid-column:span 2; grid-row:span 2; }
+.gal-grid > a:nth-child(4){ grid-column:span 2; }
+.gal-grid > a:nth-child(6){ grid-column:span 2; }
+@media (max-width: 900px){ .gal-grid{ grid-template-columns:repeat(2,1fr); grid-auto-rows:170px; } .gal-grid > a:nth-child(1){ grid-column:span 2; grid-row:span 1; } }
+.gal-item{ position:relative; border-radius:var(--radius-md); overflow:hidden; border:1px solid var(--border);
+  background: repeating-linear-gradient(135deg, rgba(255,255,255,.035) 0 2px, transparent 2px 14px), linear-gradient(155deg, var(--bg-soft), #191c22);
+  display:flex; align-items:flex-end; }
+.gal-item::after{ content:''; position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,.75), transparent 55%); opacity:0; transition:opacity .35s ease; }
+.gal-item:hover::after{ opacity:1; }
+.gal-item__ph{ position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; color:var(--ink-faint); transition:transform .5s var(--ease), color .35s ease; }
+.gal-item__ph svg{ width:30px; height:30px; opacity:.5; } .gal-item__ph span{ font-family:var(--font-mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; }
+.gal-item:hover .gal-item__ph{ transform:scale(1.08); }
+.gal-item__tag{ position:relative; z-index:1; padding:16px; opacity:0; transform:translateY(10px); transition:opacity .35s ease, transform .35s ease; font-family:var(--font-display); font-size:14.5px; font-weight:600; }
+.gal-item:hover .gal-item__tag{ opacity:1; transform:translateY(0); }
+.gal-note{ margin-top:20px; font-size:13.5px; color:var(--ink-faint); font-family:var(--font-mono); }
+
+.tst-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+@media (max-width: 900px){ .tst-grid{ grid-template-columns:1fr; } }
+.tst-card{ padding:28px 26px; border-radius:var(--radius-md); background:var(--surface); border:1px solid var(--border); display:flex; flex-direction:column; gap:18px; transition:transform .4s var(--ease), border-color .3s ease; }
+.tst-card:hover{ transform:translateY(-6px); border-color:var(--border-hi); }
+.tst-card__stars{ color:var(--orange); font-size:14px; letter-spacing:2px; }
+.tst-card p{ font-size:15px; color:var(--ink); line-height:1.65; }
+.tst-card__who{ display:flex; align-items:center; gap:12px; margin-top:auto; }
+.tst-card__avatar{ width:40px; height:40px; border-radius:50%; background:linear-gradient(135deg,var(--blue),#1c3f8f); display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-weight:700; font-size:15px; }
+.tst-card__who b{ display:block; font-size:14px; } .tst-card__who span{ font-size:12px; color:var(--ink-faint); font-family:var(--font-mono); }
+.tst-source{ display:flex; align-items:center; justify-content:center; gap:26px; margin-top:44px; flex-wrap:wrap; }
+.tst-source__badge{ display:flex; align-items:center; gap:12px; padding:12px 20px; border:1px solid var(--border); border-radius:999px; background:var(--surface); }
+.tst-source__badge b{ font-family:var(--font-display); } .tst-source__badge .g-stars{ color:var(--orange); }
+
+.cta-banner{ position:relative; border-radius:28px; overflow:hidden; padding:70px 60px; text-align:center; background:linear-gradient(135deg, #1a1006, #0a0c0f 60%); border:1px solid rgba(255,106,31,.25); }
+.cta-banner::before{ content:''; position:absolute; inset:0; background-image:linear-gradient(rgba(255,106,31,.12) 1px, transparent 1px), linear-gradient(90deg, rgba(255,106,31,.12) 1px, transparent 1px); background-size:44px 44px; -webkit-mask-image:radial-gradient(circle at 50% 0%, black, transparent 70%); mask-image:radial-gradient(circle at 50% 0%, black, transparent 70%); }
+.cta-banner__inner{ position:relative; z-index:1; }
+.cta-banner h2{ font-size:clamp(26px,4vw,40px); margin-bottom:16px; }
+.cta-banner p{ color:var(--ink-dim); font-size:16.5px; max-width:520px; margin:0 auto 32px; }
+.cta-banner__actions{ display:flex; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap; }
+@media (max-width: 620px){ .cta-banner{ padding:50px 26px; } }
+
+.split{ display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; }
+@media (max-width: 900px){ .split{ grid-template-columns:1fr; gap:36px; } }
+
+.timeline{ position:relative; padding-left:28px; }
+.timeline::before{ content:''; position:absolute; left:5px; top:6px; bottom:6px; width:1.5px; background:linear-gradient(var(--orange), var(--border)); }
+.timeline__item{ position:relative; padding-bottom:34px; } .timeline__item:last-child{ padding-bottom:0; }
+.timeline__item::before{ content:''; position:absolute; left:-28px; top:4px; width:11px; height:11px; border-radius:50%; background:var(--bg); border:2px solid var(--orange); }
+.timeline__item b.year{ font-family:var(--font-mono); color:var(--orange-soft); font-size:12.5px; letter-spacing:.06em; }
+.timeline__item h4{ margin:6px 0 6px; font-size:16.5px; } .timeline__item p{ color:var(--ink-dim); font-size:14px; }
+
+.mv-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+@media (max-width: 820px){ .mv-grid{ grid-template-columns:1fr; } }
+.mv-card{ padding:30px 26px; border-radius:var(--radius-md); border:1px solid var(--border); background:var(--surface); }
+.mv-card svg{ width:26px; height:26px; color:var(--orange); margin-bottom:18px; }
+.mv-card h3{ font-size:18px; margin-bottom:10px; } .mv-card p{ color:var(--ink-dim); font-size:14.5px; }
+
+.process{ display:grid; grid-template-columns:repeat(4,1fr); gap:22px; position:relative; }
+@media (max-width: 900px){ .process{ grid-template-columns:1fr 1fr; } }
+@media (max-width: 560px){ .process{ grid-template-columns:1fr; } }
+.process__step{ position:relative; padding:28px 22px; border-radius:var(--radius-md); background:var(--surface); border:1px solid var(--border); }
+.process__step .n{ font-family:var(--font-display); font-size:34px; color:transparent; -webkit-text-stroke:1.4px var(--orange); font-weight:700; }
+.process__step h4{ font-size:16px; margin:14px 0 8px; } .process__step p{ font-size:13.5px; color:var(--ink-dim); }
+
+.svc-detail{ display:flex; flex-direction:column; gap:0; }
+.svc-row{ display:grid; grid-template-columns:.9fr 1.1fr; gap:56px; align-items:center; padding:64px 0; border-top:1px solid var(--border); }
+.svc-row:last-child{ border-bottom:1px solid var(--border); }
+@media (max-width: 900px){ .svc-row{ grid-template-columns:1fr; gap:26px; padding:44px 0; } }
+.svc-row__tag{ font-family:var(--font-mono); font-size:12px; color:var(--ink-faint); text-transform:uppercase; letter-spacing:.08em; margin-bottom:14px; }
+.svc-row h3{ font-size:clamp(22px,3vw,30px); margin-bottom:16px; } .svc-row p{ color:var(--ink-dim); font-size:15px; margin-bottom:20px; }
+.svc-row ul{ display:flex; flex-direction:column; gap:11px; }
+.svc-row li{ display:flex; align-items:flex-start; gap:10px; font-size:14.5px; color:var(--ink); }
+.svc-row li svg{ width:16px; height:16px; color:var(--success); flex-shrink:0; margin-top:2px; }
+.svc-visual{ aspect-ratio:4/3; border-radius:var(--radius-lg); border:1px solid var(--border); background:repeating-linear-gradient(135deg, rgba(255,255,255,.035) 0 2px, transparent 2px 14px), linear-gradient(155deg, var(--bg-soft), #181b21); display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden; }
+.svc-visual svg{ width:56px; height:56px; color:var(--ink-faint); opacity:.6; }
+.svc-visual span{ position:absolute; bottom:18px; left:18px; font-family:var(--font-mono); font-size:11px; color:var(--ink-faint); letter-spacing:.06em; text-transform:uppercase; }
+
+.faq{ max-width:760px; margin:0 auto; }
+.faq-item{ border-top:1px solid var(--border); } .faq-item:last-child{ border-bottom:1px solid var(--border); }
+.faq-item__q{ display:flex; align-items:center; justify-content:space-between; gap:20px; padding:24px 4px; cursor:pointer; font-family:var(--font-display); font-size:16.5px; font-weight:500; }
+.faq-item__q svg{ width:18px; height:18px; color:var(--orange); transition:transform .35s var(--ease); flex-shrink:0; }
+.faq-item.is-open .faq-item__q svg{ transform:rotate(45deg); }
+.faq-item__a{ max-height:0; overflow:hidden; transition:max-height .4s var(--ease); }
+.faq-item__a p{ padding:0 4px 24px; color:var(--ink-dim); font-size:14.5px; max-width:640px; }
+
+.info-card{ padding:30px; border-radius:var(--radius-lg); background:var(--surface); border:1px solid var(--border); margin-bottom:20px; }
+.info-card h3{ font-size:17px; margin-bottom:18px; }
+.info-row{ display:flex; align-items:flex-start; gap:14px; padding:14px 0; border-top:1px solid var(--border); }
+.info-row:first-of-type{ border-top:none; padding-top:0; }
+.info-row__ico{ width:38px; height:38px; border-radius:9px; background:rgba(255,106,31,.14); border:1px solid rgba(255,106,31,.28); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.info-row__ico svg{ width:17px; height:17px; color:var(--orange-soft); }
+.info-row b{ display:block; font-size:14.5px; margin-bottom:2px; } .info-row span, .info-row a{ font-size:13.5px; color:var(--ink-dim); }
+.info-row a:hover{ color:var(--orange-soft); }
+.hours-list{ display:flex; flex-direction:column; gap:9px; }
+.hours-row{ display:flex; justify-content:space-between; font-size:13.5px; padding:5px 0; }
+.hours-row span:first-child{ color:var(--ink-dim); } .hours-row span:last-child{ font-family:var(--font-mono); }
+.hours-row.today span:first-child{ color:var(--ink); font-weight:600; } .hours-row.today span:last-child{ color:var(--orange-soft); }
+
+.contact-grid{ display:grid; grid-template-columns:.85fr 1.15fr; gap:50px; align-items:flex-start; }
+@media (max-width: 940px){ .contact-grid{ grid-template-columns:1fr; } }
+.form-card{ padding:38px; border-radius:var(--radius-lg); background:var(--surface); border:1px solid var(--border); position:relative; overflow:hidden; }
+.form-grid{ display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+@media (max-width: 560px){ .form-grid{ grid-template-columns:1fr; } }
+.field{ display:flex; flex-direction:column; gap:8px; margin-bottom:18px; }
+.field label{ font-size:13px; font-weight:600; color:var(--ink-dim); } .field label .req{ color:var(--orange); }
+.field input, .field select, .field textarea{ background:rgba(255,255,255,.03); border:1px solid var(--border); color:var(--ink); padding:13px 15px; border-radius:10px; font-size:14.5px; outline:none; transition:border-color .25s ease, background .25s ease; }
+.field input::placeholder, .field textarea::placeholder{ color:var(--ink-faint); }
+.field input:focus, .field select:focus, .field textarea:focus{ border-color:var(--orange); background:rgba(255,106,31,.05); }
+.field textarea{ resize:vertical; min-height:120px; }
+.field-check{ display:flex; align-items:flex-start; gap:10px; font-size:12.5px; color:var(--ink-faint); margin-bottom:22px; }
+.field-check input{ margin-top:3px; accent-color:var(--orange); }
+.form-note{ font-size:12px; color:var(--ink-faint); margin-top:14px; text-align:center; }
+.form-success{ display:none; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:16px; padding:60px 20px; }
+.form-success.is-visible{ display:flex; }
+.form-success .ico{ width:64px; height:64px; border-radius:50%; background:rgba(60,203,127,.15); border:1px solid rgba(60,203,127,.4); display:flex; align-items:center; justify-content:center; }
+.form-success .ico svg{ width:28px; height:28px; color:var(--success); }
+.form-success h3{ font-size:20px; } .form-success p{ color:var(--ink-dim); font-size:14.5px; max-width:340px; }
+#leadForm.is-hidden{ display:none; }
+.map-card{ margin-top:20px; border-radius:var(--radius-lg); overflow:hidden; border:1px solid var(--border); }
+.map-card iframe{ width:100%; height:280px; border:0; filter:grayscale(.4) invert(.92) contrast(.9); display:block; }
+
+.footer{ border-top:1px solid var(--border); padding:70px 0 30px; background:var(--bg-alt); }
+.footer__top{ display:grid; grid-template-columns:1.3fr .8fr .8fr 1fr; gap:40px; margin-bottom:56px; }
+@media (max-width: 820px){ .footer__top{ grid-template-columns:1fr 1fr; } }
+@media (max-width: 560px){ .footer__top{ grid-template-columns:1fr; } }
+.footer__brand p{ color:var(--ink-faint); font-size:13.5px; margin-top:16px; max-width:280px; }
+.footer h5{ font-family:var(--font-mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:18px; }
+.footer ul{ display:flex; flex-direction:column; gap:11px; }
+.footer a{ font-size:14px; color:var(--ink-dim); transition:color .2s ease; } .footer a:hover{ color:var(--orange-soft); }
+.footer__bottom{ display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; padding-top:26px; border-top:1px solid var(--border); font-size:12.5px; color:var(--ink-faint); }
+
+.reveal{ opacity:0; transform:translateY(26px); transition:opacity .8s var(--ease), transform .8s var(--ease); }
+.reveal.in-view{ opacity:1; transform:translateY(0); }
+.reveal-stagger > *{ opacity:0; transform:translateY(24px); transition:opacity .7s var(--ease), transform .7s var(--ease); }
+.reveal-stagger.in-view > *{ opacity:1; transform:translateY(0); }
+.reveal-stagger.in-view > *:nth-child(1){ transition-delay:.05s; } .reveal-stagger.in-view > *:nth-child(2){ transition-delay:.13s; }
+.reveal-stagger.in-view > *:nth-child(3){ transition-delay:.21s; } .reveal-stagger.in-view > *:nth-child(4){ transition-delay:.29s; }
+.reveal-stagger.in-view > *:nth-child(5){ transition-delay:.37s; } .reveal-stagger.in-view > *:nth-child(6){ transition-delay:.45s; }
+@media (prefers-reduced-motion: reduce){ *{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important; } }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible{ outline:2px solid var(--orange); outline-offset:2px; }
+.page-crumb{ display:flex; align-items:center; gap:8px; font-family:var(--font-mono); font-size:12.5px; color:var(--ink-faint); margin-bottom:20px; }
+.page-crumb a:hover{ color:var(--orange-soft); }
+.about-hero{ padding:150px 0 60px; background:radial-gradient(ellipse 60% 50% at 20% 0%, rgba(255,106,31,.14), transparent 60%), var(--bg); }
+.contact-hero{ padding:150px 0 40px; background:radial-gradient(ellipse 55% 50% at 80% 0%, rgba(62,123,250,.16), transparent 60%), var(--bg); }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="container nav__row">
+    <a href="#home" class="nav__brand">
+      <span class="nav__mark">GT</span>
+      <span>Gorman Thompson<small>Construction LLC</small></span>
+    </a>
+    <nav class="nav__links">
+      <a href="#home" data-nav>Home</a>
+      <a href="#about" data-nav>About Us</a>
+      <a href="#services" data-nav>Services</a>
+      <a href="#gallery" data-nav>Our Work</a>
+      <a href="#contact" data-nav>Contact</a>
+    </nav>
+    <div class="nav__cta">
+      <a href="tel:+18163983600" class="nav__phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.45a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg>
+        <span>(816) 398-3600</span>
+      </a>
+      <a href="#contact" class="btn btn-primary">Free Estimate</a>
+      <button class="nav__toggle" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer">
+  <button class="drawer__close" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  <a href="#home">Home</a>
+  <a href="#about">About Us</a>
+  <a href="#services">Services</a>
+  <a href="#gallery">Our Work</a>
+  <a href="#contact">Contact</a>
+  <a href="tel:+18163983600" class="btn btn-primary" style="margin-top:10px;">(816) 398-3600</a>
+</div>
+
+<!-- ============ HOME / HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero__grid-wrap"><div class="hero__grid"></div></div>
+  <div class="hero__beam hero__beam--1"></div>
+  <div class="hero__beam hero__beam--2"></div>
+
+  <div class="container hero__inner">
+    <div>
+      <div class="hero__badge"><span class="stars">★★★★★</span> 5.0 rating on Google — Smithville, MO</div>
+      <h1>Craftsmanship you can <em>see</em>. Service you can <em>trust</em>.</h1>
+      <p class="lede">Gorman Thompson Construction builds, floors, and finishes homes across Smithville and the Northland — flooring, painting, and full renovations handled by one dependable crew, start to finish.</p>
+      <div class="hero__actions">
+        <a href="#contact" class="btn btn-primary">
+          Get Your Free Estimate
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#gallery" class="btn btn-ghost">View Our Work</a>
+      </div>
+      <div class="hero__stats">
+        <div class="hero__stat"><b>5.0 ★</b><span>Google Rating</span></div>
+        <div class="hero__stat"><b>100%</b><span>Locally Owned</span></div>
+        <div class="hero__stat"><b>&lt;24 hrs</b><span>Estimate Turnaround</span></div>
+      </div>
+    </div>
+
+    <div class="hero__visual" aria-hidden="true">
+      <div class="tilt-card tilt-card--main">
+        <div class="blueprint"></div>
+        <div class="row">
+          <span class="label">Current Project</span>
+          <span class="label">Smithville, MO</span>
+        </div>
+        <div>
+          <div class="figure">Flooring</div>
+          <span class="label">LVP Install · On schedule</span>
+        </div>
+      </div>
+      <div class="tilt-card tilt-card--float">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <div><b>Estimate Sent</b><span>Reviewed in 24 hrs</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-cue"><span>Scroll</span><span class="scroll-cue__line"></span></div>
+</section>
+
+<div class="strip">
+  <div class="container strip__row">
+    <div class="strip__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>Licensed &amp; Insured</div>
+    <div class="strip__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Free, No-Pressure Estimates</div>
+    <div class="strip__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5ZM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>Locally Owned in Smithville, MO</div>
+    <div class="strip__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>One Crew, Start to Finish</div>
+  </div>
+</div>
+
+<!-- ============ SERVICES PREVIEW ============ -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="eyebrow">What We Do</span>
+      <h2>Built by hand, backed by a name you'll recognize twice.</h2>
+      <p>From a single room to a full renovation, we bring the same attention to detail to every job — because the next call we get is usually from someone who saw your project first.</p>
+    </div>
+
+    <div class="svc-grid reveal-stagger">
+      <div class="svc-card">
+        <span class="svc-card__num">01</span>
+        <div class="svc-card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <h3>Flooring Installation</h3>
+        <p>Precision LVP, laminate, and hardwood-look flooring installed clean, level, and fast — with the finish work to match.</p>
+        <a href="#svc-flooring" class="svc-card__link">See flooring work <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="svc-card">
+        <span class="svc-card__num">02</span>
+        <div class="svc-card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3Z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5Z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div>
+        <h3>Interior &amp; Exterior Painting</h3>
+        <p>Professional, reasonably priced painting that protects your home and makes it look brand new — inside and out.</p>
+        <a href="#svc-painting" class="svc-card__link">See painting work <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="svc-card">
+        <span class="svc-card__num">03</span>
+        <div class="svc-card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1m4 0h1m-6 4h1m4 0h1m-6 4h1m4 0h1"/></svg></div>
+        <h3>Home Renovations &amp; Repairs</h3>
+        <p>Kitchens, baths, trim, and everything in between — general contracting for homeowners who want it done once, done right.</p>
+        <a href="#svc-renovations" class="svc-card__link">See renovation work <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="section section--tight" id="gallery">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="eyebrow">Recent Work</span>
+      <h2>A few projects from around the Northland.</h2>
+      <p>Every job gets photographed before, during, and after — this gallery is where they'll live. Swap in your real project photos any time.</p>
+    </div>
+
+    <div class="gal-grid reveal-stagger">
+      <a href="#contact" class="gal-item"><div class="gal-item__ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3h18v18H3z"/><path d="m3 16 5-5 4 4 5-6 4 5"/><circle cx="8.5" cy="8.5" r="1.5"/></svg><span>Add project photo</span></div><span class="gal-item__tag">Kitchen Remodel — Smithville, MO</span></a>
+      <a href="#contact" class="gal-item"><div class="gal-item__ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3h18v18H3z"/><path d="m3 16 5-5 4 4 5-6 4 5"/><circle cx="8.5" cy="8.5" r="1.5"/></svg><span>Add project photo</span></div><span class="gal-item__tag">LVP Flooring Install</span></a>
+      <a href="#contact" class="gal-item"><div class="gal-item__ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3h18v18H3z"/><path d="m3 16 5-5 4 4 5-6 4 5"/><circle cx="8.5" cy="8.5" r="1.5"/></svg><span>Add project photo</span></div><span class="gal-item__tag">Exterior Repaint</span></a>
+      <a href="#contact" class="gal-item"><div class="gal-item__ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3h18v18H3z"/><path d="m3 16 5-5 4 4 5-6 4 5"/><circle cx="8.5" cy="8.5" r="1.5"/></svg><span>Add project photo</span></div><span class="gal-item__tag">Bathroom Refresh</span></a>
+      <a href="#contact" class="gal-item"><div class="gal-item__ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3h18v18H3z"/><path d="m3 16 5-5 4 4 5-6 4 5"/><circle cx="8.5" cy="8.5" r="1.5"/></svg><span>Add project photo</span></div><span class="gal-item__tag">Interior Trim &amp; Paint</span></a>
+      <a href="#contact" class="gal-item"><div class="gal-item__ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3h18v18H3z"/><path d="m3 16 5-5 4 4 5-6 4 5"/><circle cx="8.5" cy="8.5" r="1.5"/></svg><span>Add project photo</span></div><span class="gal-item__tag">Whole-Home Renovation</span></a>
+    </div>
+    <p class="gal-note">// Placeholder gallery — send over your project photos and we'll drop them right into these frames.</p>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section" style="background:var(--bg-alt);" id="reviews">
+  <div class="container">
+    <div class="section__head section__head--center reveal">
+      <span class="eyebrow">Client Reviews</span>
+      <h2>What Smithville homeowners are saying.</h2>
+      <p>Real reviews from real clients on Google — this is the reputation we show up to protect on every job.</p>
+    </div>
+
+    <div class="tst-grid reveal-stagger">
+      <div class="tst-card">
+        <div class="tst-card__stars">★★★★★</div>
+        <p>"Hired GT Construction to install LVP flooring at an entry point in our home. Nate is very talented at what he does — will definitely recommend him for future work."</p>
+        <div class="tst-card__who">
+          <div class="tst-card__avatar">SW</div>
+          <div><b>Shelly Williams</b><span>Google Review</span></div>
+        </div>
+      </div>
+      <div class="tst-card">
+        <div class="tst-card__stars">★★★★★</div>
+        <p>"Nate did a great job painting my house — very professional and reasonably priced. The work went above and beyond my expectations. I'll definitely be calling him again."</p>
+        <div class="tst-card__who">
+          <div class="tst-card__avatar">JL</div>
+          <div><b>Jerry Lynch</b><span>Local Guide · Google Review</span></div>
+        </div>
+      </div>
+      <div class="tst-card">
+        <div class="tst-card__stars">★★★★★</div>
+        <p>"Great pricing and easy to work with from start to finish. Would recommend them to anyone looking for a straightforward, fair-priced crew."</p>
+        <div class="tst-card__who">
+          <div class="tst-card__avatar">SR</div>
+          <div><b>Skylar Roth</b><span>Google Review</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tst-source reveal">
+      <div class="tst-source__badge"><span class="g-stars">★★★★★</span><span><b>5.0</b> out of 5 — 5 Google reviews</span></div>
+      <a href="tel:+18163983600" class="btn btn-ghost">Call (816) 398-3600</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about-hero" id="about">
+  <div class="container">
+    <div class="page-crumb"><a href="#home">Home</a> / About Us</div>
+    <span class="eyebrow reveal">About Gorman Thompson Construction</span>
+    <h2 class="reveal" style="font-size:clamp(30px,4.4vw,48px); max-width:780px; margin-top:16px;">Built on referrals, not advertising.</h2>
+    <p class="reveal" style="color:var(--ink-dim); font-size:17px; max-width:600px; margin-top:18px;">Every one of our reviews came from a homeowner who called us because a neighbor did first. Here's the story — and the standards — behind that reputation.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split">
+    <div class="reveal">
+      <span class="eyebrow">Our Story</span>
+      <h2 style="font-size:clamp(26px,3.6vw,36px); margin:16px 0 18px;">From one flooring job to a full-service crew.</h2>
+      <p style="color:var(--ink-dim); font-size:16px; margin-bottom:16px;">Gorman Thompson Construction LLC was founded in Smithville, Missouri by Nate Thompson, who built the company's name on flooring installation and interior painting before expanding into full home renovations. Nate still leads every project personally, which is why the same care that went into that first LVP install shows up in every job since.</p>
+      <p style="color:var(--ink-dim); font-size:16px;">We're a small, local operation on purpose. Fewer projects running at once means more attention on yours — clear communication, honest pricing, and a crew that shows up when they say they will.</p>
+    </div>
+    <div class="reveal">
+      <div class="timeline">
+        <div class="timeline__item">
+          <b class="year">Foundation</b>
+          <h4>GT Construction opens in Smithville</h4>
+          <p>Nate Thompson starts the business focused on flooring installation and interior painting for local homeowners.</p>
+        </div>
+        <div class="timeline__item">
+          <b class="year">Growth</b>
+          <h4>Word of mouth takes over</h4>
+          <p>Reviews like Jerry's and Shelly's start rolling in — every new client comes through a referral, not an ad.</p>
+        </div>
+        <div class="timeline__item">
+          <b class="year">Today</b>
+          <h4>Full-service renovations</h4>
+          <p>GT Construction now handles flooring, painting, and complete room-to-room renovations across the Northland.</p>
+        </div>
+        <div class="timeline__item">
+          <b class="year">What's Next</b>
+          <h4>Your project</h4>
+          <p>We keep our schedule tight so we can take on new work without stretching our crew too thin.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight" style="background:var(--bg-alt);">
+  <div class="container">
+    <div class="section__head section__head--center reveal">
+      <span class="eyebrow">How We Work</span>
+      <h2>The standards behind a 5.0 rating.</h2>
+      <p>Five reviews, five stars. Here's what we hold ourselves to on every single job to keep it that way.</p>
+    </div>
+    <div class="mv-grid reveal-stagger">
+      <div class="mv-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+        <h3>Do it right the first time</h3>
+        <p>No shortcuts, no callbacks. If a detail isn't right, we fix it before we call the job done — not after you notice.</p>
+      </div>
+      <div class="mv-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3H8v4h8V3Z"/></svg>
+        <h3>Fair, upfront pricing</h3>
+        <p>You'll know the cost before we start — no inflated change orders, no surprise line items on the invoice.</p>
+      </div>
+      <div class="mv-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <h3>One crew, start to finish</h3>
+        <p>The person who quotes your job is the same person on-site running it — no rotating subcontractors, no confusion.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES DETAIL ============ -->
+<section class="about-hero" id="services-detail" style="padding-top:60px;">
+  <div class="container">
+    <div class="page-crumb"><a href="#home">Home</a> / Services</div>
+    <span class="eyebrow reveal">What We Do</span>
+    <h2 class="reveal" style="font-size:clamp(30px,4.4vw,48px); max-width:780px; margin-top:16px;">Flooring, painting, and renovations — done by one crew.</h2>
+    <p class="reveal" style="color:var(--ink-dim); font-size:17px; max-width:600px; margin-top:18px;">Every service below is handled in-house by Gorman Thompson Construction. No subcontractor hand-offs, no lost details between trades.</p>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container svc-detail">
+
+    <div class="svc-row" id="svc-flooring">
+      <div>
+        <span class="svc-row__tag">Service 01</span>
+        <h3>Flooring Installation</h3>
+        <p>From LVP (luxury vinyl plank) to laminate and hardwood-look flooring, we install floors that stay flat, tight, and level for years — not just for the walk-through.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>LVP, laminate & vinyl plank installation</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Subfloor prep, leveling & repair</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Transitions, trim & baseboard finishing</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Entryways, single rooms, or whole-home floors</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Get a Flooring Estimate</a>
+      </div>
+      <div class="svc-visual">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 3h18v18H3z"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg>
+        <span>Add flooring project photo</span>
+      </div>
+    </div>
+
+    <div class="svc-row" id="svc-painting">
+      <div class="svc-visual" style="order:2;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M18 12.5 8.5 22H2v-6.5L11.5 6"/><path d="m16 4 4 4M14.5 8.5l-2-2 3-3 2 2z"/></svg>
+        <span>Add painting project photo</span>
+      </div>
+      <div>
+        <span class="svc-row__tag">Service 02</span>
+        <h3>Interior &amp; Exterior Painting</h3>
+        <p>Professional, reasonably priced painting with clean lines and a finish that holds up — one of the services our clients recommend us for most.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Full interior repaints, room by room</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Exterior siding, trim & fascia painting</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Prep work: patching, sanding & priming</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Cabinet, door & trim refinishing</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Get a Painting Estimate</a>
+      </div>
+    </div>
+
+    <div class="svc-row" id="svc-renovations">
+      <div>
+        <span class="svc-row__tag">Service 03</span>
+        <h3>Home Renovations &amp; Repairs</h3>
+        <p>General contracting for the projects that touch more than one trade — kitchens, bathrooms, and room additions handled start to finish by the same crew.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Kitchen & bathroom remodeling</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Framing, drywall & finish carpentry</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>General home repairs & punch lists</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Full-room and whole-home renovations</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Get a Renovation Estimate</a>
+      </div>
+      <div class="svc-visual">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1m4 0h1m-6 4h1m4 0h1m-6 4h1m4 0h1"/></svg>
+        <span>Add renovation project photo</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section section--tight" style="background:var(--bg-alt);">
+  <div class="container">
+    <div class="section__head section__head--center reveal">
+      <span class="eyebrow">How It Works</span>
+      <h2>From estimate to finished project.</h2>
+      <p>Four steps, one crew, no surprises along the way.</p>
+    </div>
+    <div class="process reveal-stagger">
+      <div class="process__step"><span class="n">01</span><h4>Reach out</h4><p>Call or fill out the estimate form with a few details about your project.</p></div>
+      <div class="process__step"><span class="n">02</span><h4>Free walkthrough</h4><p>We'll look at the space, talk through options, and answer your questions on-site.</p></div>
+      <div class="process__step"><span class="n">03</span><h4>Upfront quote</h4><p>You'll get a clear, itemized price before any work begins — no vague estimates.</p></div>
+      <div class="process__step"><span class="n">04</span><h4>The work gets done</h4><p>Our crew completes the job on schedule, then walks you through the finished result.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section__head section__head--center reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2>Common questions</h2>
+    </div>
+    <div class="faq reveal">
+      <div class="faq-item is-open">
+        <div class="faq-item__q">Do you offer free estimates?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></div>
+        <div class="faq-item__a" style="max-height:200px;"><p>Yes — every estimate is free and comes with no obligation. We'll walk the project with you and follow up with a written quote, usually within 24 hours.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-item__q">What areas do you serve?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></div>
+        <div class="faq-item__a"><p>We're based in Smithville, MO and serve homeowners throughout the surrounding Northland area of Kansas City. Not sure if you're in range? Just give us a call.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-item__q">Are you licensed and insured?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></div>
+        <div class="faq-item__a"><p>Yes. Gorman Thompson Construction LLC is licensed and insured, so you're covered from the first day of the project to the last.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-item__q">How long does a typical flooring or painting job take?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></div>
+        <div class="faq-item__a"><p>It depends on scope — a single room can often be done in a day or two, while full-home flooring or exterior painting may take a week or more. We'll give you a real timeline with your quote.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-item__q">Do you subcontract the work out?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></div>
+        <div class="faq-item__a"><p>No. The same crew that quotes your job is the one that shows up to do it, which is why our clients know exactly who's in their home.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container">
+    <div class="cta-banner reveal">
+      <div class="cta-banner__inner">
+        <span class="eyebrow">Let's Build Something</span>
+        <h2 style="margin-top:14px;">Ready to start your project?</h2>
+        <p>Tell us what you're working on and we'll get back to you with a straightforward estimate — usually within 24 hours.</p>
+        <div class="cta-banner__actions">
+          <a href="#contact" class="btn btn-primary">Request Your Free Estimate</a>
+          <a href="tel:+18163983600" class="btn btn-ghost">Call (816) 398-3600</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact-hero" id="contact">
+  <div class="container">
+    <div class="page-crumb"><a href="#home">Home</a> / Contact</div>
+    <span class="eyebrow reveal">Get In Touch</span>
+    <h2 class="reveal" style="font-size:clamp(30px,4.4vw,46px); max-width:720px; margin-top:16px;">Let's talk about your project.</h2>
+    <p class="reveal" style="color:var(--ink-dim); font-size:17px; max-width:560px; margin-top:18px;">Fill out the form below or give us a call — we typically respond with an estimate within 24 hours.</p>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container contact-grid">
+
+    <div class="reveal">
+      <div class="info-card">
+        <h3>Contact Details</h3>
+        <div class="info-row">
+          <div class="info-row__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.45a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><b>Phone</b><a href="tel:+18163983600">(816) 398-3600</a></div>
+        </div>
+        <div class="info-row">
+          <div class="info-row__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><b>Address</b><a href="https://maps.google.com/?q=301+192nd+St,+Smithville,+MO+64089" target="_blank" rel="noopener">301 192nd St, Smithville, MO 64089</a></div>
+        </div>
+        <div class="info-row">
+          <div class="info-row__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+          <div><b>Response Time</b><span>Estimates within 24 hours</span></div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h3>Business Hours</h3>
+        <div class="hours-list">
+          <div class="hours-row"><span>Monday</span><span>6:00 AM – 6:30 PM</span></div>
+          <div class="hours-row"><span>Tuesday</span><span>6:00 AM – 7:00 PM</span></div>
+          <div class="hours-row today"><span>Wednesday</span><span>6:00 AM – 7:00 PM</span></div>
+          <div class="hours-row"><span>Thursday</span><span>6:00 AM – 7:00 PM</span></div>
+          <div class="hours-row"><span>Friday</span><span>6:00 AM – 7:00 PM</span></div>
+          <div class="hours-row"><span>Saturday</span><span>12:00 – 5:00 PM</span></div>
+          <div class="hours-row"><span>Sunday</span><span>Closed</span></div>
+        </div>
+      </div>
+
+      <div class="map-card">
+        <iframe title="Gorman Thompson Construction location map" loading="lazy" src="https://maps.google.com/maps?q=301%20192nd%20St%2C%20Smithville%2C%20MO%2064089&t=&z=14&ie=UTF8&iwloc=&output=embed"></iframe>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="form-card">
+
+        <!--
+          FORM SETUP NOTE:
+          This form currently simulates a submission with JS below so you can preview the full
+          experience. To actually receive leads, connect it to a form backend:
+            1) Formspree (easiest): create a free form at formspree.io, then set the form's
+               action to "https://formspree.io/f/yourFormId" and method="POST".
+            2) Netlify Forms: add data-netlify="true" and a hidden "form-name" input if hosting on Netlify.
+            3) Your own backend / Zapier / email service of choice.
+        -->
+        <form id="leadForm" action="#" method="POST">
+          <h3 style="font-size:20px; margin-bottom:24px;">Request a Free Estimate</h3>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Full Name <span class="req">*</span></label>
+              <input type="text" id="name" name="name" placeholder="Jane Homeowner" required>
+            </div>
+            <div class="field">
+              <label for="phone">Phone Number <span class="req">*</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="(816) 555-0123" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="email">Email Address <span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+          </div>
+
+          <div class="field">
+            <label for="service">Service Needed</label>
+            <select id="service" name="service">
+              <option value="">Select a service…</option>
+              <option value="flooring">Flooring Installation</option>
+              <option value="painting">Interior / Exterior Painting</option>
+              <option value="renovation">Home Renovation or Repair</option>
+              <option value="other">Something Else</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">Project Details <span class="req">*</span></label>
+            <textarea id="message" name="message" placeholder="Tell us a bit about your project — rooms involved, timeline, anything helpful." required></textarea>
+          </div>
+
+          <label class="field-check">
+            <input type="checkbox" required>
+            I agree to be contacted by Gorman Thompson Construction LLC about my project.
+          </label>
+
+          <button type="submit" class="btn btn-primary btn-block">
+            Send My Estimate Request
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+          <p class="form-note">We respect your privacy — your information is never shared or sold.</p>
+        </form>
+
+        <div class="form-success" id="formSuccess">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <h3>Request received!</h3>
+          <p>Thanks for reaching out — we'll follow up with your free estimate within 24 hours. For anything urgent, call us at (816) 398-3600.</p>
+          <a href="tel:+18163983600" class="btn btn-ghost">Call (816) 398-3600</a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="#home" class="nav__brand"><span class="nav__mark">GT</span><span>Gorman Thompson<small>Construction LLC</small></span></a>
+        <p>Locally owned construction company in Smithville, MO specializing in flooring, painting, and full home renovations.</p>
+      </div>
+      <div>
+        <h5>Site</h5>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#svc-flooring">Flooring Installation</a></li>
+          <li><a href="#svc-painting">Interior &amp; Exterior Painting</a></li>
+          <li><a href="#svc-renovations">Home Renovations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:+18163983600">(816) 398-3600</a></li>
+          <li><a href="https://maps.google.com/?q=301+192nd+St,+Smithville,+MO+64089" target="_blank" rel="noopener">301 192nd St, Smithville, MO 64089</a></li>
+          <li><a href="#contact">Get a Free Estimate</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Gorman Thompson Construction LLC. All rights reserved.</span>
+      <span>Licensed &amp; Insured · Smithville, MO</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  /* Sticky nav background */
+  const nav = document.querySelector('.nav');
+  const onScroll = () => {
+    if (!nav) return;
+    if (window.scrollY > 24) nav.classList.add('is-scrolled');
+    else nav.classList.remove('is-scrolled');
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  /* Active nav link on scroll */
+  const navLinks = document.querySelectorAll('[data-nav]');
+  const navSections = ['home','about','services','gallery','contact'].map(id => document.getElementById(id)).filter(Boolean);
+  if ('IntersectionObserver' in window && navSections.length) {
+    const navIO = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(l => l.classList.remove('is-active'));
+          const match = document.querySelector(`[data-nav][href="#${entry.target.id}"]`);
+          if (match) match.classList.add('is-active');
+        }
+      });
+    }, { threshold: 0.3, rootMargin: '-40% 0px -40% 0px' });
+    navSections.forEach(s => navIO.observe(s));
+  }
+
+  /* Mobile drawer */
+  const toggle = document.querySelector('.nav__toggle');
+  const drawer = document.querySelector('.drawer');
+  const drawerClose = document.querySelector('.drawer__close');
+  if (toggle && drawer) {
+    toggle.addEventListener('click', () => drawer.classList.add('is-open'));
+    drawerClose && drawerClose.addEventListener('click', () => drawer.classList.remove('is-open'));
+    drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => drawer.classList.remove('is-open')));
+  }
+
+  /* Scroll reveal */
+  const revealTargets = document.querySelectorAll('.reveal, .reveal-stagger');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    revealTargets.forEach(t => io.observe(t));
+  } else {
+    revealTargets.forEach(t => t.classList.add('in-view'));
+  }
+
+  /* Hero tilt cards (3D mouse parallax) */
+  const heroVisual = document.querySelector('.hero__visual');
+  if (heroVisual && window.matchMedia('(pointer: fine)').matches) {
+    const cards = heroVisual.querySelectorAll('.tilt-card');
+    heroVisual.addEventListener('mousemove', (e) => {
+      const rect = heroVisual.getBoundingClientRect();
+      const px = (e.clientX - rect.left) / rect.width - 0.5;
+      const py = (e.clientY - rect.top) / rect.height - 0.5;
+      cards.forEach((card, i) => {
+        const depth = i === 0 ? 1 : 1.8;
+        const rx = (-py * 10 * depth).toFixed(2);
+        const ry = (px * 12 * depth).toFixed(2);
+        card.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateZ(0)`;
+      });
+    });
+    heroVisual.addEventListener('mouseleave', () => {
+      cards.forEach(card => card.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg)');
+    });
+  }
+
+  /* Service card glow follows cursor */
+  document.querySelectorAll('.svc-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      card.style.setProperty('--mx', `${e.clientX - rect.left}px`);
+      card.style.setProperty('--my', `${e.clientY - rect.top}px`);
+    });
+  });
+
+  /* FAQ accordion */
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const q = item.querySelector('.faq-item__q');
+    const a = item.querySelector('.faq-item__a');
+    if (!q || !a) return;
+    q.addEventListener('click', () => {
+      const isOpen = item.classList.contains('is-open');
+      item.parentElement.querySelectorAll('.faq-item').forEach(other => {
+        other.classList.remove('is-open');
+        other.querySelector('.faq-item__a').style.maxHeight = null;
+      });
+      if (!isOpen) {
+        item.classList.add('is-open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+
+  /* Contact / lead form */
+  const form = document.getElementById('leadForm');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      let valid = true;
+      form.querySelectorAll('[required]').forEach(field => {
+        if (!field.value.trim()) {
+          valid = false;
+          field.style.borderColor = '#ff4d4d';
+        } else {
+          field.style.borderColor = '';
+        }
+      });
+      if (!valid) return;
+
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = 'Sending…';
+      submitBtn.disabled = true;
+
+      // NOTE: This form currently simulates a submission.
+      // Connect it to Formspree, Netlify Forms, or your own endpoint —
+      // see the comment near the <form> tag above.
+      setTimeout(() => {
+        form.classList.add('is-hidden');
+        const success = document.getElementById('formSuccess');
+        if (success) success.classList.add('is-visible');
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+      }, 900);
+    });
+  }
+
+});
+</script>
+</body>
+</html>
